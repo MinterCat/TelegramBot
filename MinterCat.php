@@ -116,20 +116,18 @@ for ($y = 0; $y<=$ccount;$y+=1)
 	}
 }
 
-$json = "
+$text = "
 #$ii Котик /id$id
 Порода <$name>
 Примерная стоимость - $price MINTERCAT
 $t";
 	}}
-	$json = explode("&", $json);
-	$count = count($json);
-	for ($i = 0; $i <= $count; $i++) {
-	$text = $json[$i];
-	$bot->sendMessage($getid, $text);
+	$count = count(explode("&", $text));
+for ($i = 0; $i <= $count; $i++) {
+	$textMessage = $text[$i];
+	$bot->sendMessage($getid, $textMessage);
 	}
 //else{$text = "На данном кошельке нет МинтерКотов.Отправьте боту команду /help , чтобы узнать, как получить своего первого МинтерКотика.";$bot->sendMessage($getid, $text);}
-//==============================
 //===============================   
 }
 
