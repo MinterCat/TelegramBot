@@ -173,16 +173,7 @@ $bip = $bip * $price;
 $bip = round($bip,2);
 
 $data = $payloads2['result']['time'];
-$nd = explode("T", $data)[0];
-
-
-$timestamp2 = date('Y-m-d',strtotime("$nd"));
-		
-		$unixDate = strtotime("$timestamp2");
-		$normalDate = date('d', $unixDate);
-		
-$unixD = strtotime($timestamp2);
-$nd = date('d.m.Y', $unixD);
+$nd = date('d.m.Y', strtotime(explode('T', $data)[0]));
 $text = "
 Котик по имени /id$id
 Порода <$name>
