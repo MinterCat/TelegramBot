@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 // подрубаем API
-require_once("vendor/autoload.php");
+require_once('vendor/autoload.php');
 
 // дебаг
 if(true){
@@ -14,7 +14,7 @@ $token = "";
 $bot = new \TelegramBot\Api\Client($token,null);
 
 // если бот еще не зарегистрирован - регистируем
-if(!file_exists("registered.trigger")){ 
+if(!file_exists('registered.trigger')){
 	/**
 	 * файл registered.trigger будет создаваться после регистрации бота. 
 	 * если этого файла нет значит бот не зарегистрирован 
